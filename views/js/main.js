@@ -502,7 +502,8 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+// -- Changed to getElementsByClassName instead of document.queryall
+  var items = document.getElementsByClassName('mover');
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -522,7 +523,7 @@ function updatePositions() {
 window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
-// Reduced the for loop to only render 20 pizzas instead of 200
+// ------ Reduced the for loop to only render 20 pizzas instead of 200
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
