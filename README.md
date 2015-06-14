@@ -1,3 +1,21 @@
+## Steps to Run amd improvements.
+
+Open index.html in browser to see the main page.  When running a tunnel through NGROK, I was getting 97% optimized.
+CSS is inlined and the HTML file is minimized.  JS is Asynced.  IMages are optimized.
+
+Open views/pizza.html to see the pizza page.  Most changes were made in main.js.  Moved several variables out of for loops to prevent unnecessary calculations and accessing the DOM.  Used more efficient DOM access methods. Also made 1 small change in CSS to streamline the painting.  Pizza resize should be under 5ms.  Scrolling is over 60 FPS.  
+
+
+
+Resources:
+Office hours gitub page and recorded session
+Jankfree
+Forums
+Kraken.io for image optimization
+Google Developer tools and resources
+
+
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
