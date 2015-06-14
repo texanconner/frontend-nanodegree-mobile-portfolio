@@ -503,10 +503,17 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
 // -- Changed to getElementsByClassName instead of document.queryall
+
+ 
+// Look up transform: translateX();
+// set phase as just 5 numbers.
   var items = document.getElementsByClassName('mover');
+
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    console.log(phase);
+    console.log(items[i].style.left);
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
